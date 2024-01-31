@@ -1,0 +1,12 @@
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\bin\Debug\MiWinMacroRD.exe.config
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\bin\Debug\MiWinMacroRD.exe
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\bin\Debug\MiWinMacroRD.pdb
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\bin\Debug\MiWinMacroRD.xml
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\bin\Debug\Gma.System.MouseKeyHook.dll
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\obj\Debug\MiWinMacroRD.vbprojResolveAssemblyReference.cache
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\obj\Debug\MiWinMacroRD.MacroPrincipal.resources
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\obj\Debug\MiWinMacroRD.Resources.resources
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\obj\Debug\MiWinMacroRD.vbproj.GenerateResource.Cache
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\obj\Debug\MiWinMacroRD.exe
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\obj\Debug\MiWinMacroRD.xml
+D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\obj\Debug\MiWinMacroRD.pdb
