@@ -23,45 +23,31 @@ Partial Class MacroPrincipal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.grdClicks = New System.Windows.Forms.DataGridView()
-        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.X = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Y = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnEjecutar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnEjecutarMacro = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Segundos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.X = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Y = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.grdClicks, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'grdClicks
         '
+        Me.grdClicks.AllowUserToAddRows = False
+        Me.grdClicks.AllowUserToDeleteRows = False
         Me.grdClicks.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grdClicks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdClicks.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Fecha, Me.X, Me.Y})
+        Me.grdClicks.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Fecha, Me.Segundos, Me.X, Me.Y})
         Me.grdClicks.Location = New System.Drawing.Point(12, 82)
         Me.grdClicks.Name = "grdClicks"
+        Me.grdClicks.ReadOnly = True
         Me.grdClicks.Size = New System.Drawing.Size(550, 273)
         Me.grdClicks.TabIndex = 0
-        '
-        'Fecha
-        '
-        Me.Fecha.HeaderText = "Fecha"
-        Me.Fecha.Name = "Fecha"
-        Me.Fecha.ReadOnly = True
-        '
-        'X
-        '
-        Me.X.HeaderText = "X"
-        Me.X.Name = "X"
-        Me.X.ReadOnly = True
-        '
-        'Y
-        '
-        Me.Y.HeaderText = "Y"
-        Me.Y.Name = "Y"
-        Me.Y.ReadOnly = True
         '
         'btnEjecutar
         '
@@ -99,6 +85,31 @@ Partial Class MacroPrincipal
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
+        'Fecha
+        '
+        Me.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Fecha.HeaderText = "Fecha"
+        Me.Fecha.Name = "Fecha"
+        Me.Fecha.ReadOnly = True
+        '
+        'Segundos
+        '
+        Me.Segundos.HeaderText = "Segundos"
+        Me.Segundos.Name = "Segundos"
+        Me.Segundos.ReadOnly = True
+        '
+        'X
+        '
+        Me.X.HeaderText = "X"
+        Me.X.Name = "X"
+        Me.X.ReadOnly = True
+        '
+        'Y
+        '
+        Me.Y.HeaderText = "Y"
+        Me.Y.Name = "Y"
+        Me.Y.ReadOnly = True
+        '
         'MacroPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -118,11 +129,12 @@ Partial Class MacroPrincipal
     End Sub
 
     Friend WithEvents grdClicks As DataGridView
-    Friend WithEvents Fecha As DataGridViewTextBoxColumn
-    Friend WithEvents X As DataGridViewTextBoxColumn
-    Friend WithEvents Y As DataGridViewTextBoxColumn
     Friend WithEvents btnEjecutar As Button
     Friend WithEvents btnGuardar As Button
     Friend WithEvents btnEjecutarMacro As Button
     Friend WithEvents btnLimpiar As Button
+    Friend WithEvents Fecha As DataGridViewTextBoxColumn
+    Friend WithEvents Segundos As DataGridViewTextBoxColumn
+    Friend WithEvents X As DataGridViewTextBoxColumn
+    Friend WithEvents Y As DataGridViewTextBoxColumn
 End Class

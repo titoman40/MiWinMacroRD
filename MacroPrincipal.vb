@@ -11,6 +11,7 @@ Public Class MacroPrincipal
     Private _clicks As New List(Of ClickInfo)
 
     Public Grabando As Boolean = False
+    Public FechaUltimoEvento As DateTime = Now
 
     Public Sub New()
         InitializeComponent()
@@ -22,7 +23,9 @@ Public Class MacroPrincipal
         If Not Grabando Then
             Return
         End If
-        _clicks.Add(New ClickInfo With {.Time = DateTime.Now, .Position = e.Location})
+
+        _clicks.Add(New ClickInfo With {.Time = DateTime.Now, .Segundos = Math.Round(Convert.ToDouble((DateTime.Now - FechaUltimoEvento).TotalMilliseconds / 1000), 2), .Position = e.Location})
+        FechaUltimoEvento = Now
         RefreshMacros()
     End Sub
 
@@ -45,7 +48,7 @@ Public Class MacroPrincipal
         Try
             grdClicks.Rows.Clear()
             For Each click As ClickInfo In _clicks
-                grdClicks.Rows.Add(click.Time, click.Position.X, click.Position.Y)
+                grdClicks.Rows.Add(click.Time, click.Segundos, click.Position.X, click.Position.Y)
             Next
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -86,6 +89,7 @@ Public Class MacroPrincipal
             End If
         End If
         Grabando = Not Grabando
+        FechaUltimoEvento = Now
         btnEjecutar.Text = IIf(Grabando, "Detener", "Grabar")
         RefreshMacros()
     End Sub
@@ -101,13 +105,13 @@ Public Class MacroPrincipal
             For Each click As ClickInfo In _clicks
                 If previousClick IsNot Nothing Then
                     ' Calcula la diferencia de tiempo en segundos
-                    Dim timeDifference = (click.Time - previousClick.Time).TotalSeconds
+                    Dim timeDifference = (click.Time - previousClick.Time).TotalMilliseconds
 
                     ' Haz clic en la posición del clic anterior
                     HacerClick(previousClick.Position.X, previousClick.Position.Y)
 
                     ' Espera la diferencia de tiempo antes de hacer el siguiente clic
-                    Threading.Thread.Sleep(timeDifference * 1000)
+                    Threading.Thread.Sleep((timeDifference / 1000) * 1000)
                 End If
 
                 previousClick = click
