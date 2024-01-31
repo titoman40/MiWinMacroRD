@@ -103,6 +103,7 @@ Partial Class MacroPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(574, 367)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnEjecutarMacro)
