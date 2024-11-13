@@ -22,15 +22,22 @@ Partial Class MacroPrincipal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.grdClicks = New System.Windows.Forms.DataGridView()
-        Me.btnEjecutar = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnEjecutarMacro = New System.Windows.Forms.Button()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Segundos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.X = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Y = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnEjecutar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnEjecutarMacro = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.TimerCadaSegundos = New System.Windows.Forms.Timer(Me.components)
+        Me.txtSegundosBucle = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnEjecutarMacroCiclo = New System.Windows.Forms.Button()
+        Me.btnPararBucle = New System.Windows.Forms.Button()
         CType(Me.grdClicks, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -48,6 +55,31 @@ Partial Class MacroPrincipal
         Me.grdClicks.ReadOnly = True
         Me.grdClicks.Size = New System.Drawing.Size(550, 273)
         Me.grdClicks.TabIndex = 0
+        '
+        'Fecha
+        '
+        Me.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Fecha.HeaderText = "Fecha"
+        Me.Fecha.Name = "Fecha"
+        Me.Fecha.ReadOnly = True
+        '
+        'Segundos
+        '
+        Me.Segundos.HeaderText = "Segundos"
+        Me.Segundos.Name = "Segundos"
+        Me.Segundos.ReadOnly = True
+        '
+        'X
+        '
+        Me.X.HeaderText = "X"
+        Me.X.Name = "X"
+        Me.X.ReadOnly = True
+        '
+        'Y
+        '
+        Me.Y.HeaderText = "Y"
+        Me.Y.Name = "Y"
+        Me.Y.ReadOnly = True
         '
         'btnEjecutar
         '
@@ -85,30 +117,55 @@ Partial Class MacroPrincipal
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
-        'Fecha
+        'TimerCadaSegundos
         '
-        Me.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Fecha.HeaderText = "Fecha"
-        Me.Fecha.Name = "Fecha"
-        Me.Fecha.ReadOnly = True
+        Me.TimerCadaSegundos.Interval = 60000
         '
-        'Segundos
+        'txtSegundosBucle
         '
-        Me.Segundos.HeaderText = "Segundos"
-        Me.Segundos.Name = "Segundos"
-        Me.Segundos.ReadOnly = True
+        Me.txtSegundosBucle.Location = New System.Drawing.Point(449, 20)
+        Me.txtSegundosBucle.Name = "txtSegundosBucle"
+        Me.txtSegundosBucle.Size = New System.Drawing.Size(35, 20)
+        Me.txtSegundosBucle.TabIndex = 5
+        Me.txtSegundosBucle.Text = "10"
         '
-        'X
+        'Label1
         '
-        Me.X.HeaderText = "X"
-        Me.X.Name = "X"
-        Me.X.ReadOnly = True
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(369, 23)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(74, 13)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Ejecutar Cada"
         '
-        'Y
+        'Label2
         '
-        Me.Y.HeaderText = "Y"
-        Me.Y.Name = "Y"
-        Me.Y.ReadOnly = True
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(490, 23)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(24, 13)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "seg"
+        '
+        'btnEjecutarMacroCiclo
+        '
+        Me.btnEjecutarMacroCiclo.Location = New System.Drawing.Point(372, 43)
+        Me.btnEjecutarMacroCiclo.Name = "btnEjecutarMacroCiclo"
+        Me.btnEjecutarMacroCiclo.Size = New System.Drawing.Size(190, 23)
+        Me.btnEjecutarMacroCiclo.TabIndex = 8
+        Me.btnEjecutarMacroCiclo.Text = "Ejecutar Macro en Bucle"
+        Me.btnEjecutarMacroCiclo.UseVisualStyleBackColor = True
+        '
+        'btnPararBucle
+        '
+        Me.btnPararBucle.Location = New System.Drawing.Point(520, 17)
+        Me.btnPararBucle.Name = "btnPararBucle"
+        Me.btnPararBucle.Size = New System.Drawing.Size(42, 23)
+        Me.btnPararBucle.TabIndex = 9
+        Me.btnPararBucle.Text = "Parar"
+        Me.btnPararBucle.UseVisualStyleBackColor = True
         '
         'MacroPrincipal
         '
@@ -116,6 +173,11 @@ Partial Class MacroPrincipal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(574, 367)
+        Me.Controls.Add(Me.btnPararBucle)
+        Me.Controls.Add(Me.btnEjecutarMacroCiclo)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtSegundosBucle)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnEjecutarMacro)
         Me.Controls.Add(Me.btnGuardar)
@@ -125,6 +187,7 @@ Partial Class MacroPrincipal
         Me.Text = "Form1"
         CType(Me.grdClicks, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -137,4 +200,10 @@ Partial Class MacroPrincipal
     Friend WithEvents Segundos As DataGridViewTextBoxColumn
     Friend WithEvents X As DataGridViewTextBoxColumn
     Friend WithEvents Y As DataGridViewTextBoxColumn
+    Friend WithEvents TimerCadaSegundos As Timer
+    Friend WithEvents txtSegundosBucle As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents btnEjecutarMacroCiclo As Button
+    Friend WithEvents btnPararBucle As Button
 End Class

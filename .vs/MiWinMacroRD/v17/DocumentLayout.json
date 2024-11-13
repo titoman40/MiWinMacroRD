@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Trabajos\\Programas\\C#\\WinForm\\MiWinMacroRD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E14EC5B9-B8FD-460C-A324-A3D88879E4DC}|MiWinMacroRD.vbproj|d:\\trabajos\\programas\\c#\\winform\\miwinmacrord\\macroprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{E14EC5B9-B8FD-460C-A324-A3D88879E4DC}|MiWinMacroRD.vbproj|solutionrelative:macroprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14EC5B9-B8FD-460C-A324-A3D88879E4DC}|MiWinMacroRD.vbproj|d:\\trabajos\\programas\\c#\\winform\\miwinmacrord\\macroprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{E14EC5B9-B8FD-460C-A324-A3D88879E4DC}|MiWinMacroRD.vbproj|solutionrelative:macroprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MacroPrincipal.vb",
+              "DocumentMoniker": "D:\\Trabajos\\Programas\\C#\\WinForm\\MiWinMacroRD\\MacroPrincipal.vb",
+              "RelativeDocumentMoniker": "MacroPrincipal.vb",
+              "ToolTip": "D:\\Trabajos\\Programas\\C#\\WinForm\\MiWinMacroRD\\MacroPrincipal.vb",
+              "RelativeToolTip": "MacroPrincipal.vb",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAowJUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-11-13T00:51:39.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MacroPrincipal.vb [Design]",
+              "DocumentMoniker": "D:\\Trabajos\\Programas\\C#\\WinForm\\MiWinMacroRD\\MacroPrincipal.vb",
+              "RelativeDocumentMoniker": "MacroPrincipal.vb",
+              "ToolTip": "D:\\Trabajos\\Programas\\C#\\WinForm\\MiWinMacroRD\\MacroPrincipal.vb [Design]",
+              "RelativeToolTip": "MacroPrincipal.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-11-13T00:51:33.774Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

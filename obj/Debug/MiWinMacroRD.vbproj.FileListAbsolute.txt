@@ -10,3 +10,16 @@ D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\obj\Debug\MiWi
 D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\obj\Debug\MiWinMacroRD.exe
 D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\obj\Debug\MiWinMacroRD.xml
 D:\Trabajos\Programas\VB\Mis Macros APP\MiWinMacroRD\MiWinMacroRD\obj\Debug\MiWinMacroRD.pdb
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\bin\Debug\MiWinMacroRD.exe.config
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\bin\Debug\MiWinMacroRD.exe
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\bin\Debug\MiWinMacroRD.pdb
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\bin\Debug\MiWinMacroRD.xml
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\obj\Debug\MiWinMacroRD.vbproj.AssemblyReference.cache
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\obj\Debug\MiWinMacroRD.MacroPrincipal.resources
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\obj\Debug\MiWinMacroRD.Resources.resources
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\obj\Debug\MiWinMacroRD.vbproj.GenerateResource.cache
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\obj\Debug\MiWinMacroRD.vbproj.CoreCompileInputs.cache
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\obj\Debug\MiWinMac.E5528CDC.Up2Date
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\obj\Debug\MiWinMacroRD.exe
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\obj\Debug\MiWinMacroRD.xml
+D:\Trabajos\Programas\C#\WinForm\MiWinMacroRD\obj\Debug\MiWinMacroRD.pdb

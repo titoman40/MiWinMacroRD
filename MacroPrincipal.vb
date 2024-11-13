@@ -132,4 +132,24 @@ Public Class MacroPrincipal
         _clicks = New List(Of ClickInfo)
         RefreshMacros()
     End Sub
+
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+
+    End Sub
+
+    Private Sub btnPararBucle_Click(sender As Object, e As EventArgs) Handles btnPararBucle.Click
+        TimerCadaSegundos.Enabled = False
+        TimerCadaSegundos.Stop()
+    End Sub
+
+    Private Sub btnEjecutarMacroCiclo_Click(sender As Object, e As EventArgs) Handles btnEjecutarMacroCiclo.Click
+        If String.IsNullOrEmpty(txtSegundosBucle.Text) OrElse Not IsNumeric(txtSegundosBucle.Text) Then
+            MsgBox("Debe ser numerico los segundos")
+            Return
+        End If
+
+        TimerCadaSegundos.Interval = txtSegundosBucle.Text * 1000
+        TimerCadaSegundos.Enabled = True
+        TimerCadaSegundos.Start()
+    End Sub
 End Class
